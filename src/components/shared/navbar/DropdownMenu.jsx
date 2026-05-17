@@ -18,20 +18,13 @@ const DropdownMenu = () => {
       </Dropdown.Trigger>
       <Dropdown.Popover>
         <Dropdown.Menu>
-
           <Dropdown.Item className="md:hidden">
-            <Link href="/">
-              <Label>Home</Label>
-            </Link>
-          </Dropdown.Item>
-
-          <Dropdown.Item>
             <Link href="/explore-car">
               <Label>Explore Car</Label>
             </Link>
           </Dropdown.Item>
 
-          <Dropdown.Item className="md:hidden">
+          <Dropdown.Item>
             <Link href="/my-added-car">
               <Label>My Added Cars</Label>
             </Link>
