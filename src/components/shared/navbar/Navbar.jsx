@@ -4,6 +4,7 @@ import NavLink from "./NavLink";
 import DropdownMenu from "./DropdownMenu";
 import { Icon } from "@iconify/react";
 import { FaCalendarCheck } from "react-icons/fa";
+import RoundedLoading from "@/app/loading";
 
 const navItem = [
   { name: "Home", path: "/", icon: <Icon icon="typcn:home" /> },
@@ -66,7 +67,7 @@ const Navbar = () => {
           >
             Join Free
           </Link>
-          {/* <DropdownMenu /> */}
+          <DropdownMenu />
         </div>
       </nav>
     </div>
