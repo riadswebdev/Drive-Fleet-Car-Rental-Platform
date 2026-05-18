@@ -10,7 +10,13 @@
     "pickupLocation": "Dubai Marina, UAE",
     "description": "Experience pure Italian performance with the Lamborghini Huracán EVO, designed for thrill-seekers who demand style, speed, and exclusivity.",
     "availability": "Available",
-    "bookingCount": 34
+    "bookingCount": 34,
+    "owner": {
+      "name": "Alexander Morgan",
+      "avatar": "https://randomuser.me/api/portraits/men/11.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "488 Spider",
@@ -23,7 +29,13 @@
     "pickupLocation": "Beverly Hills, California, USA",
     "description": "Turn every journey into an unforgettable statement with the Ferrari 488 Spider, blending breathtaking performance with open-top luxury.",
     "availability": "Available",
-    "bookingCount": 27
+    "bookingCount": 27,
+    "owner": {
+      "name": "Sophia Bennett",
+      "avatar": "https://randomuser.me/api/portraits/women/12.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "Porsche 911 Turbo S",
@@ -36,7 +48,13 @@
     "pickupLocation": "Munich, Germany",
     "description": "Precision engineering meets everyday luxury in the Porsche 911 Turbo S, built for drivers who appreciate world-class performance.",
     "availability": "Unavailable",
-    "bookingCount": 41
+    "bookingCount": 41,
+    "owner": {
+      "name": "Daniel Carter",
+      "avatar": "https://randomuser.me/api/portraits/men/13.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "M8 Competition",
@@ -49,7 +67,13 @@
     "pickupLocation": "London, United Kingdom",
     "description": "The BMW M8 Competition offers exceptional comfort, refined craftsmanship, and race-inspired performance for premium travelers.",
     "availability": "Available",
-    "bookingCount": 18
+    "bookingCount": 18,
+    "owner": {
+      "name": "Olivia Thompson",
+      "avatar": "https://randomuser.me/api/portraits/women/14.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "S-Class S580",
@@ -62,7 +86,13 @@
     "pickupLocation": "Paris, France",
     "description": "Arrive with confidence in the iconic Mercedes-Benz S-Class, delivering executive comfort, prestige, and advanced technology.",
     "availability": "Available",
-    "bookingCount": 45
+    "bookingCount": 45,
+    "owner": {
+      "name": "James Anderson",
+      "avatar": "https://randomuser.me/api/portraits/men/15.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "RS7 Sportback",
@@ -75,7 +105,13 @@
     "pickupLocation": "Zurich, Switzerland",
     "description": "Bold styling and unmatched road presence make the Audi RS7 Sportback a perfect blend of luxury and performance.",
     "availability": "Unavailable",
-    "bookingCount": 29
+    "bookingCount": 29,
+    "owner": {
+      "name": "Emma Wilson",
+      "avatar": "https://randomuser.me/api/portraits/women/16.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "720S Coupe",
@@ -88,7 +124,13 @@
     "pickupLocation": "Singapore Marina Bay, Singapore",
     "description": "The McLaren 720S offers track-inspired performance and futuristic design for an unforgettable driving experience.",
     "availability": "Available",
-    "bookingCount": 21
+    "bookingCount": 21,
+    "owner": {
+      "name": "Benjamin Harris",
+      "avatar": "https://randomuser.me/api/portraits/men/17.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "Ghost Series II",
@@ -101,7 +143,13 @@
     "pickupLocation": "Abu Dhabi, UAE",
     "description": "Redefine luxury with the Rolls-Royce Ghost, crafted for those who appreciate timeless elegance and elite comfort.",
     "availability": "Available",
-    "bookingCount": 12
+    "bookingCount": 12,
+    "owner": {
+      "name": "Charlotte Walker",
+      "avatar": "https://randomuser.me/api/portraits/women/18.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "Aventador SVJ",
@@ -114,7 +162,13 @@
     "pickupLocation": "Miami Beach, Florida, USA",
     "description": "Unleash raw power and dramatic styling with the Lamborghini Aventador SVJ, engineered for elite performance lovers.",
     "availability": "Unavailable",
-    "bookingCount": 39
+    "bookingCount": 39,
+    "owner": {
+      "name": "Michael Scott",
+      "avatar": "https://randomuser.me/api/portraits/men/19.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "Roma",
@@ -127,7 +181,13 @@
     "pickupLocation": "Rome, Italy",
     "description": "Elegant proportions and powerful performance make the Ferrari Roma a masterpiece of modern grand touring.",
     "availability": "Available",
-    "bookingCount": 16
+    "bookingCount": 16,
+    "owner": {
+      "name": "Ava Martinez",
+      "avatar": "https://randomuser.me/api/portraits/women/20.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "Cayenne Turbo GT",
@@ -140,7 +200,13 @@
     "pickupLocation": "Vancouver, Canada",
     "description": "The Porsche Cayenne Turbo GT combines sports-car DNA with SUV practicality for the ultimate luxury adventure.",
     "availability": "Available",
-    "bookingCount": 24
+    "bookingCount": 24,
+    "owner": {
+      "name": "William Parker",
+      "avatar": "https://randomuser.me/api/portraits/men/21.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "X7 M60i",
@@ -153,7 +219,13 @@
     "pickupLocation": "Toronto, Canada",
     "description": "Travel in commanding style with the BMW X7 M60i, offering spacious luxury and dynamic performance.",
     "availability": "Available",
-    "bookingCount": 20
+    "bookingCount": 20,
+    "owner": {
+      "name": "Isabella Young",
+      "avatar": "https://randomuser.me/api/portraits/women/22.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "G63 AMG",
@@ -166,7 +238,13 @@
     "pickupLocation": "Doha, Qatar",
     "description": "The Mercedes-Benz G63 AMG combines legendary off-road capability with unmistakable luxury and performance.",
     "availability": "Unavailable",
-    "bookingCount": 47
+    "bookingCount": 47,
+    "owner": {
+      "name": "Ethan Robinson",
+      "avatar": "https://randomuser.me/api/portraits/men/23.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "R8 V10 Performance",
@@ -179,7 +257,13 @@
     "pickupLocation": "Sydney, Australia",
     "description": "Audi R8 V10 Performance delivers motorsport-inspired excitement with premium German craftsmanship.",
     "availability": "Available",
-    "bookingCount": 15
+    "bookingCount": 15,
+    "owner": {
+      "name": "Mia Clark",
+      "avatar": "https://randomuser.me/api/portraits/women/24.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "McLaren GT",
@@ -192,7 +276,13 @@
     "pickupLocation": "Tokyo, Japan",
     "description": "Designed for long-distance luxury and supercar excitement, the McLaren GT is pure driving pleasure.",
     "availability": "Available",
-    "bookingCount": 9
+    "bookingCount": 9,
+    "owner": {
+      "name": "Noah Lewis",
+      "avatar": "https://randomuser.me/api/portraits/men/25.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "Rolls-Royce Cullinan",
@@ -205,7 +295,13 @@
     "pickupLocation": "Riyadh, Saudi Arabia",
     "description": "Command the road in the Rolls-Royce Cullinan, the pinnacle of luxury SUV craftsmanship.",
     "availability": "Available",
-    "bookingCount": 11
+    "bookingCount": 11,
+    "owner": {
+      "name": "Amelia Hall",
+      "avatar": "https://randomuser.me/api/portraits/women/26.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "Lamborghini Urus Performante",
@@ -218,7 +314,13 @@
     "pickupLocation": "Monaco, Monaco",
     "description": "Blending SUV practicality with Lamborghini DNA, the Urus Performante offers unmatched road dominance.",
     "availability": "Unavailable",
-    "bookingCount": 33
+    "bookingCount": 33,
+    "owner": {
+      "name": "Lucas Allen",
+      "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "Ferrari SF90 Stradale",
@@ -231,7 +333,13 @@
     "pickupLocation": "Las Vegas, Nevada, USA",
     "description": "Experience cutting-edge hybrid performance and iconic Ferrari design with the SF90 Stradale.",
     "availability": "Available",
-    "bookingCount": 28
+    "bookingCount": 28,
+    "owner": {
+      "name": "Harper King",
+      "avatar": "https://randomuser.me/api/portraits/women/28.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "Panamera Turbo",
@@ -244,7 +352,13 @@
     "pickupLocation": "Barcelona, Spain",
     "description": "Combining executive comfort with sports-car performance, the Porsche Panamera Turbo redefines luxury travel.",
     "availability": "Available",
-    "bookingCount": 14
+    "bookingCount": 14,
+    "owner": {
+      "name": "Henry Wright",
+      "avatar": "https://randomuser.me/api/portraits/men/29.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   },
   {
     "carName": "i7 xDrive60",
@@ -257,6 +371,12 @@
     "pickupLocation": "Amsterdam, Netherlands",
     "description": "Silent power and futuristic luxury come together in the fully electric BMW i7 xDrive60.",
     "availability": "Available",
-    "bookingCount": 19
+    "bookingCount": 19,
+    "owner": {
+      "name": "Evelyn Green",
+      "avatar": "https://randomuser.me/api/portraits/women/30.jpg",
+      "role": "Verified Dealer",
+      "verifiedType": "dealer"
+    }
   }
 ]
