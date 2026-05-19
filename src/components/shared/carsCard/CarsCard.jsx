@@ -16,11 +16,11 @@ const CarsCard = ({ car }) => {
     owner: { name = "", role = "", verifiedType = "", avatar = "" } = {},
   } = car || {};
 
+  console.log(car)
+
   return (
     <Card className="h-full bg-white border border-zinc-200/70 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
-    
       <div className="p-5">
-        
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-center gap-3 min-w-0">
             <Image
@@ -52,7 +52,6 @@ const CarsCard = ({ car }) => {
           </Chip>
         </div>
 
-   
         <div className="relative aspect-video w-full mt-6">
           <Image
             src={imageUrl}
@@ -62,7 +61,6 @@ const CarsCard = ({ car }) => {
           />
         </div>
 
-       
         <div className="flex items-center justify-between gap-3 mt-5">
           <div className="px-1  truncate">
             <div className="flex items-center gap-1 bg-zinc-100 px-2 py-1 rounded-full mb-2">
@@ -92,7 +90,6 @@ const CarsCard = ({ car }) => {
         </div>
       </div>
 
-      
       <div className="border-t border-zinc-100 px-5 pb-4 flex items-center justify-between gap-3">
         <div className="flex items-center gap-3 min-w-0">
           <Avatar size="sm" src={avatar} alt={name} className="shrink-0" />
@@ -114,7 +111,7 @@ const CarsCard = ({ car }) => {
         </div>
 
         <Link
-          href="/"
+          href={`/explore-car/${car._id}`}
           className="text-sm font-semibold text-zinc-900 hover:text-blue-600 transition-colors whitespace-nowrap"
         >
           Details

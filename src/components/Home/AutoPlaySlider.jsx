@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const AutoPlaySlider = () => {
   return (
-    <div className="w-full max-w-140  ">
+    <div className="w-full max-w-140  flex justify-center">
       <Swiper
         modules={[Autoplay]}
         autoplay={{
@@ -30,7 +30,7 @@ const AutoPlaySlider = () => {
               width={900}
               height={700}
               alt="Banner Image"
-              className="flex items-center justify-center"
+              className="flex items-center justify-center mx-auto"
             />
           </SwiperSlide>
         ))}

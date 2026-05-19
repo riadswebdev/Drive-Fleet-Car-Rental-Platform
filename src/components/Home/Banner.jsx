@@ -7,8 +7,8 @@ import AutoPlaySlider from "./AutoPlaySlider";
 const Banner = () => {
   return (
     <div className="mx-5 xl:mx-0">
-      <div className=" md:flex flex-row-reverse items-center justify-between py-20 md:py-28 w-full max-w-300 mx-auto">
-        <div className="mb-10">
+      <div className=" md:flex flex-row-reverse items-center justify-between mt-20 md:pt-28 w-full max-w-300 mx-auto">
+        <div className="mb-10 flex items-center justify-center">
 
           <AutoPlaySlider />
         </div>
