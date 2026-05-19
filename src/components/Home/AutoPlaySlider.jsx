@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const AutoPlaySlider = () => {
   return (
-    <div className="w-full max-w-162.5 h-62.5 md:h-100 lg:h-125">
+    <div className="w-full max-w-140  ">
       <Swiper
         modules={[Autoplay]}
         autoplay={{
