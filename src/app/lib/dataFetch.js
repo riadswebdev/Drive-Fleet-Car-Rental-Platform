@@ -1,7 +1,8 @@
+import { BASE_URL } from "./config";
+
 export const getAllCars = async () => {
   try {
-    const res = await fetch("http://localhost:5000/cars");
-
+    const res = await fetch(`${BASE_URL}/cars`);
     const AllCars = await res.json();
     return AllCars.data;
   } catch (error) {
@@ -11,7 +12,7 @@ export const getAllCars = async () => {
 
 export const getAvailableCars = async () => {
   try {
-    const res = await fetch("http://localhost:5000/cars/available");
+    const res = await fetch(`${BASE_URL}/cars/available`);
 
     const AvailableCars = await res.json();
     return AvailableCars.data;
@@ -22,11 +23,20 @@ export const getAvailableCars = async () => {
 
 export const getSingleCar = async (id) => {
   try {
-    const res = await fetch(`http://localhost:5000/cars/${id}`);
-
+    const res = await fetch(`${BASE_URL}/cars/${id}`);
     const singleCar = await res.json();
-    console.log(singleCar.data);
-    return singleCar
+   
+    return singleCar;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getBookingCars = async (id) => {
+  try {
+    const res = await fetch(`${BASE_URL}/booking/${id}`);
+    const bookingCar = await res.json();
+    return bookingCar;
   } catch (error) {
     throw error;
   }

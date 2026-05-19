@@ -24,6 +24,7 @@ const carTypes = [
 const availabilityOptions = ["Available", "Unavailable"];
 
 const AddCarsPage = () => {
+  
   const onSubmit = async (e) => {
     await addCars(e);
   };
