@@ -1,9 +1,14 @@
-import { ArrowRightFromSquare } from "@gravity-ui/icons";
 import { Avatar, Dropdown, Label } from "@heroui/react";
 import Link from "next/link";
 import LogOutButton from "./LogOutButton";
 
-const DropdownMenu = () => {
+
+const DropdownMenu = async () => {
+  
+
+  
+
+
   return (
     <Dropdown>
       <Dropdown.Trigger className="rounded-full">

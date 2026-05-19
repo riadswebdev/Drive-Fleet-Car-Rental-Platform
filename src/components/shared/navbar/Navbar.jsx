@@ -4,6 +4,8 @@ import NavLink from "./NavLink";
 import DropdownMenu from "./DropdownMenu";
 import { Icon } from "@iconify/react";
 import { FaCalendarCheck } from "react-icons/fa";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
 const navItem = [
   { name: "Home", path: "/", icon: <Icon icon="typcn:home" /> },
@@ -24,7 +26,16 @@ const navItem = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = async() => {
+
+const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+const activeUser = session?.user
+
+  console.log(activeUser)
+
   return (
     <div className="bg-[#050b18] px-5 xl:px-0 sticky top-0 z-50">
       <nav className="flex items-center justify-between py-4 w-full max-w-350 mx-auto">
@@ -66,7 +77,9 @@ const Navbar = () => {
           >
             Join Free
           </Link>
+          <div className={!activeUser ? "hidden" : ""}>
           <DropdownMenu />
+          </div>
         </div>
       </nav>
     </div>

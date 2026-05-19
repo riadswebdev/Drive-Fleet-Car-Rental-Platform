@@ -1,6 +1,11 @@
 "use client";
 
-import {  Eye, EyeSlash } from "@gravity-ui/icons";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { Eye, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
   FieldError,
@@ -9,22 +14,59 @@ import {
   InputGroup,
   Label,
   Separator,
+  Spinner,
   TextField,
 } from "@heroui/react";
-import { Icon } from "@iconify/react";
-import Link from "next/link";
-import { useState } from "react";
+import { authClient } from "@/lib/auth-client";
 
 const SignUpPage = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [signUpError, setSignUpError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = (e) => {
+  const router = useRouter();
+
+  const onSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    setLoading(true);
+    setSignUpError("");
+    try {
+      const formData = new FormData(e.currentTarget);
 
-      const userData = Object.fromEntries(formData.entries())
-      
-    console.log(userData)
+      const userData = Object.fromEntries(formData.entries());
+
+      console.log(userData.password);
+      const { data, error } = await authClient.signUp.email({
+        name: userData?.name,
+        image: userData?.image,
+        email: userData?.email,
+        password: userData?.password,
+      });
+      console.log(error, data);
+      if (error || !data) {
+        const message = error?.message || "Failed to create account";
+        setSignUpError(message);
+        toast.error(message);
+        return;
+      } else {
+        toast.success("Account created successfully");
+        setSignUpError("");
+
+        // e.target.reset();
+
+        // setTimeout(() => {
+        //   router.push("/login");
+        // }, 1000);
+      }
+    } catch (err) {
+      console.log(err);
+
+      setSignUpError("Something went wrong");
+
+      toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -55,7 +97,7 @@ const SignUpPage = () => {
         <Separator className="w-[50%]" />
       </div>
 
-      <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
+      <form className="flex flex-col gap-4" onSubmit={onSubmit}>
         <TextField
           isRequired
           name="name"
@@ -88,14 +130,6 @@ const SignUpPage = () => {
             } catch {
               return "Please enter a valid URL";
             }
-
-            const imageExtensions =
-              /\.(jpg|jpeg|png|gif|webp|bmp|svg)(\?.*)?$/i;
-            if (!imageExtensions.test(value)) {
-              return "Please enter a valid image URL (jpg, jpeg, png, gif, webp, bmp, svg)";
-            }
-
-            return null;
           }}
         >
           <Label>Image URL</Label>
@@ -128,7 +162,7 @@ const SignUpPage = () => {
 
         <TextField
           isRequired
-          minLength={8}
+          minLength={6}
           name="password"
           type="password"
           validate={(value) => {
@@ -173,11 +207,16 @@ const SignUpPage = () => {
         </TextField>
 
         <div>
-          <Button type="submit" className="w-full">
-            Create Account
+          <Button isDisabled={loading} type="submit" className="w-full">
+            {loading ?
+              <div className="flex  items-center gap-2">
+                <span className="">Creating</span>
+                <Spinner color="default" />
+              </div>
+            : "Create Account"}
           </Button>
         </div>
-      </Form>
+      </form>
       <p className="text-sm text-center mt-2">
         Already have an account{" "}
         <Link href="/login" className="text-blue-600">

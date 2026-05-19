@@ -1,5 +1,6 @@
 "use client";
 
+import { authClient, signIn } from "@/lib/auth-client";
 import { Eye, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
@@ -9,22 +10,59 @@ import {
   InputGroup,
   Label,
   Separator,
+  Spinner,
   TextField,
 } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [signInError, setSignInError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    setLoading(true);
+    setSignInError("");
+    try {
+      const formData = new FormData(e.currentTarget);
 
-    const userData = Object.fromEntries(formData.entries());
+      const userData = Object.fromEntries(formData.entries());
 
-    console.log(userData);
+      const { data, error } = await authClient.signIn.email({
+        email: userData.email,
+        password: userData.password,
+      });
+      console.log(error, data);
+      if (error) {
+        setSignInError(error.message);
+        toast.error(error.message);
+        return;
+      }
+
+      toast.success("Successfully login");
+
+      setSignInError("");
+
+      // e.target.reset();
+
+      setTimeout(() => {
+        router.push("/");
+      }, 1000);
+    } catch (err) {
+      console.log(err);
+
+      setSignInError("Something went wrong");
+
+      toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <div className="mx-auto w-full max-w-md shadow p-10 my-20 bg-white rounded-2xl border border-zinc-100  ">
@@ -90,8 +128,13 @@ const LoginPage = () => {
         </TextField>
 
         <div>
-          <Button type="submit" className="w-full">
-            Sign In
+          <Button isDisabled={loading} type="submit" className="w-full">
+            {loading ?
+              <div className="flex  items-center gap-2">
+                <span className="">Login</span>
+                <Spinner color="default" />
+              </div>
+            : "Sign In"}
           </Button>
         </div>
       </Form>
