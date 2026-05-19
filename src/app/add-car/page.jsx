@@ -81,8 +81,7 @@ const AddCarsPage = () => {
               <select
                 name="carType"
                 required
-                className=" w-full h-11 px-3 rounded-xl border border-zinc-200 bg-white text-sm outline-none
-    "
+                className=" w-full h-11 px-3 rounded-xl border border-zinc-200 bg-white text-sm outline-none"
               >
                 <option value="">Select car type</option>
 
@@ -155,14 +154,7 @@ const AddCarsPage = () => {
               rows={5}
               name="description"
               placeholder="Write premium car description..."
-              className="
-    w-full
-    rounded-xl
-    border border-zinc-200
-    p-3
-    outline-none
-    resize-none
-  "
+              className="w-full rounded-xl border border-zinc-200 p-3 outline-none resize-none"
             />
 
             <FieldError />
