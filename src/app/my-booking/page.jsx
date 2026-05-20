@@ -3,7 +3,6 @@ import { getBookingCarsByUserId } from "../lib/dataFetch";
 import { auth } from "@/lib/auth";
 import UserBookingCard from "@/components/ui/BookingCard";
 
-
 const MyBookingPage = async () => {
   const session = await auth.api.getSession({
     headers: await headers(),
@@ -12,10 +11,12 @@ const MyBookingPage = async () => {
 
   const bookingCarsData = await getBookingCarsByUserId(userId);
   const data = bookingCarsData?.data;
-  
+
   return (
     <div className="w-full max-w-7xl mx-auto mb-5">
-      my booking
+      <h2 className="mb-10 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-10 lg:leading-16  text-zinc-900">
+        my booking
+      </h2>
       <div>
         {data.length === 0 ?
           <div className="flex flex-col items-center justify-center py-24 text-center">

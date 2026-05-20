@@ -52,3 +52,12 @@ export const searchValue = async (query) => {
     throw error;
   }
 };
+
+export const getAddedCarsData = async () => {
+  try {
+    const res = await fetch(`${BASE_URL}/addedCar`);
+    return res.json();
+  } catch (error) {
+    throw error;
+  }
+};

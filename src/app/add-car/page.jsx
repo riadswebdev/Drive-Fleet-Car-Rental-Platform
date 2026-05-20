@@ -1,5 +1,7 @@
 "use client";
 
+import { addCars } from "../lib/action";
+import { authClient } from "@/lib/auth-client";
 import {
   FieldError,
   Form,
@@ -8,7 +10,8 @@ import {
   TextField,
   Button,
 } from "@heroui/react";
-import { addCars } from "../lib/action";
+import toast from "react-hot-toast";
+import RoundedLoading from "../loading";
 
 const carTypes = [
   "SUV",
@@ -24,8 +27,29 @@ const carTypes = [
 const availabilityOptions = ["Available", "Unavailable"];
 
 const AddCarsPage = () => {
+  const { data: session, isPending } = authClient.useSession();
+
+  if (isPending) return <RoundedLoading />;
+
   const onSubmit = async (e) => {
-    await addCars(e);
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const carData = Object.fromEntries(formData.entries());
+    const addCarData = {
+      ...carData,
+      owner: {
+        name: session?.user?.name,
+        avatar: session?.user?.image,
+        role: "Verified Dealer",
+      },
+    };
+    const result = await addCars(addCarData);
+    if (result.success) {
+      toast.success(result.message);
+      e.target.reset();
+    } else {
+      toast.error(result.message);
+    }
   };
 
   return (
@@ -50,7 +74,7 @@ const AddCarsPage = () => {
           </p>
         </div>
 
-        <Form className="flex flex-col gap-5" action={onSubmit}>
+        <Form className="flex flex-col gap-5" onSubmit={onSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
             <TextField isRequired name="carName">
               <Label>Car Name</Label>
