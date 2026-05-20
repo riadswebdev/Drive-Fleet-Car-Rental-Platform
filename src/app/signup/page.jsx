@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { Eye, EyeSlash } from "@gravity-ui/icons";
+import { authClient } from "@/lib/auth-client";
 import {
   Button,
   FieldError,
@@ -17,11 +18,10 @@ import {
   Spinner,
   TextField,
 } from "@heroui/react";
-import { authClient } from "@/lib/auth-client";
 
 const SignUpPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [signUpError, setSignUpError] = useState("");
+  // const [signUpError, setSignUpError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
@@ -29,28 +29,24 @@ const SignUpPage = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setSignUpError("");
     try {
       const formData = new FormData(e.currentTarget);
-
       const userData = Object.fromEntries(formData.entries());
-
-      console.log(userData.password);
+      console.log(userData);
       const { data, error } = await authClient.signUp.email({
-        name: userData?.name,
-        image: userData?.image,
-        email: userData?.email,
-        password: userData?.password,
+        email: userData.email,
+        password: userData.password,
+        name: userData.name,
+        image: userData.image,
       });
-      console.log(error, data);
-      if (error || !data) {
+      console.log(data, "user data")
+      console.log(error, "errrrrrrrrrrrrr")
+      if (error) {
         const message = error?.message || "Failed to create account";
-        setSignUpError(message);
         toast.error(message);
         return;
       } else {
         toast.success("Account created successfully");
-        setSignUpError("");
 
         // e.target.reset();
 
@@ -60,8 +56,6 @@ const SignUpPage = () => {
       }
     } catch (err) {
       console.log(err);
-
-      setSignUpError("Something went wrong");
 
       toast.error("Something went wrong");
     } finally {
@@ -97,7 +91,7 @@ const SignUpPage = () => {
         <Separator className="w-[50%]" />
       </div>
 
-      <form className="flex flex-col gap-4" onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit} className="flex flex-col gap-4">
         <TextField
           isRequired
           name="name"
@@ -154,6 +148,7 @@ const SignUpPage = () => {
         >
           <Label>Email</Label>
           <Input
+            name="email"
             className="h-11 rounded-lg border border-zinc-100"
             placeholder="john@example.com"
           />
@@ -206,17 +201,15 @@ const SignUpPage = () => {
           <FieldError />
         </TextField>
 
-        <div>
-          <Button isDisabled={loading} type="submit" className="w-full">
-            {loading ?
-              <div className="flex  items-center gap-2">
-                <span className="">Creating</span>
-                <Spinner color="default" />
-              </div>
-            : "Create Account"}
-          </Button>
-        </div>
-      </form>
+        <Button isDisabled={loading} type="submit" className="w-full">
+          {loading ?
+            <div className="flex  items-center gap-2">
+              <span className="">Creating</span>
+              <Spinner color="default" />
+            </div>
+          : "Create Account"}
+        </Button>
+      </Form>
       <p className="text-sm text-center mt-2">
         Already have an account{" "}
         <Link href="/login" className="text-blue-600">

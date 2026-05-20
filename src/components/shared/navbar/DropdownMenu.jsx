@@ -5,10 +5,6 @@ import LogOutButton from "./LogOutButton";
 
 const DropdownMenu = async () => {
   
-
-  
-
-
   return (
     <Dropdown>
       <Dropdown.Trigger className="rounded-full">

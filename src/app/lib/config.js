@@ -1,4 +1,4 @@
-export const BASE_URL = process.env.API_URL;
+export const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 if (!BASE_URL) {
-  throw new Error("Missing API_URL");
+  throw new Error("Missing NEXT_PUBLIC_API_URL");
 }

@@ -53,6 +53,7 @@ const LoginPage = () => {
 
       setTimeout(() => {
         router.push("/");
+        router.refresh();
       }, 1000);
     } catch (err) {
       console.log(err);
@@ -102,7 +103,7 @@ const LoginPage = () => {
           <FieldError />
         </TextField>
 
-        <TextField isRequired minLength={8} name="password" type="password">
+        <TextField isRequired minLength={6} name="password" type="password">
           <Label>Password</Label>
           <InputGroup className="h-11 rounded-lg border border-zinc-100">
             <InputGroup.Input
@@ -139,7 +140,7 @@ const LoginPage = () => {
         </div>
       </Form>
       <p className="text-sm text-center mt-2">
-        Don't have an account?
+        Don`t have an account?
         <Link href="/signup" className="text-blue-600">
           Sign Up
         </Link>

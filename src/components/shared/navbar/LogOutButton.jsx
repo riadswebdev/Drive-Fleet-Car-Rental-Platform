@@ -12,7 +12,8 @@ const LogOutButton = () => {
     await authClient.signOut({
       fetchOptions: {
         onSuccess: () => {
-          router.push("/login"); // redirect to login page
+          router.push("/login");
+          router.refresh()
         },
       },
     });
@@ -20,7 +21,11 @@ const LogOutButton = () => {
 
   return (
     <Dropdown.Item id="logout" textValue="Logout" variant="danger">
-      <Button onPress={handleLogoutBtn} className="flex w-full items-center justify-between gap-2">
+      <Button
+        variant="ghost"
+        onPress={handleLogoutBtn}
+        className="flex w-full items-center justify-between gap-2"
+      >
         <Label>Log Out</Label>
         <ArrowRightFromSquare className="size-3.5 text-danger" />
       </Button>

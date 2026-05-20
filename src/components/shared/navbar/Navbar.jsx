@@ -26,15 +26,14 @@ const navItem = [
   },
 ];
 
-const Navbar = async() => {
-
-const session = await auth.api.getSession({
+const Navbar = async () => {
+  const session = await auth.api.getSession({
     headers: await headers(),
   });
 
-const activeUser = session?.user
+  const activeUser = session?.user;
 
-  console.log(activeUser)
+  // console.log(activeUser);
 
   return (
     <div className="bg-[#050b18] px-5 xl:px-0 sticky top-0 z-50">
@@ -77,9 +76,7 @@ const activeUser = session?.user
           >
             Join Free
           </Link>
-          <div className={!activeUser ? "hidden" : ""}>
-          <DropdownMenu />
-          </div>
+          {activeUser && <DropdownMenu />}
         </div>
       </nav>
     </div>
