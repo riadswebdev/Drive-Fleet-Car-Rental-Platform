@@ -1,7 +1,12 @@
 "use client";
 
-import { authClient, signIn } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { Eye, EyeSlash } from "@gravity-ui/icons";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import toast from "react-hot-toast";
 import {
   Button,
   FieldError,
@@ -13,11 +18,6 @@ import {
   Spinner,
   TextField,
 } from "@heroui/react";
-import { Icon } from "@iconify/react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,35 +31,26 @@ const LoginPage = () => {
     setSignInError("");
     try {
       const formData = new FormData(e.currentTarget);
-
       const userData = Object.fromEntries(formData.entries());
-
-      const { data, error } = await authClient.signIn.email({
+      const { error } = await authClient.signIn.email({
         email: userData.email,
         password: userData.password,
       });
-      console.log(error, data);
       if (error) {
         setSignInError(error.message);
         toast.error(error.message);
         return;
       }
-
       toast.success("Successfully login");
-
       setSignInError("");
-
-      // e.target.reset();
-
+      e.target.reset();
       setTimeout(() => {
         router.push("/");
         router.refresh();
       }, 1000);
     } catch (err) {
       console.log(err);
-
       setSignInError("Something went wrong");
-
       toast.error("Something went wrong");
     } finally {
       setLoading(false);
@@ -92,7 +83,7 @@ const LoginPage = () => {
         <span className="text-blue-600 ">or</span>
         <Separator className="w-[50%]" />
       </div>
-
+      <p className="text-xs text-center mb-2 text-danger">{signInError}</p>
       <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="email" type="email">
           <Label>Email</Label>

@@ -1,7 +1,9 @@
 "use client";
 
 import { ListBox, Select } from "@heroui/react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const popularCategories = [
   "Luxury SUV",
@@ -24,6 +26,7 @@ const otherCategories = [
 
 const CarsCategory = () => {
   const router = useRouter();
+  const [showOthers, setShowOthers] = useState(false);
 
   const handleCategory = (category) => {
     router.push(`/explore-car?query=${category}`);
@@ -38,8 +41,6 @@ const CarsCategory = () => {
 
       <Select.Popover>
         <ListBox aria-label="Car Categories">
-         
-
           {popularCategories.map((category) => (
             <ListBox.Item
               key={category}
@@ -52,8 +53,22 @@ const CarsCategory = () => {
             </ListBox.Item>
           ))}
 
-          <ListBox.Section title="Other">
-            {otherCategories.map((category) => (
+          <ListBox.Item
+            id="others"
+            textValue="Others"
+            onPress={() => setShowOthers(!showOthers)}
+          >
+            <div className="flex items-center justify-between w-full">
+              <span>Others</span>
+
+              {showOthers ?
+                <ChevronUp size={16} />
+              : <ChevronDown size={16} />}
+            </div>
+          </ListBox.Item>
+
+          {showOthers &&
+            otherCategories.map((category) => (
               <ListBox.Item
                 key={category}
                 id={category}
@@ -64,7 +79,6 @@ const CarsCategory = () => {
                 <ListBox.ItemIndicator />
               </ListBox.Item>
             ))}
-          </ListBox.Section>
         </ListBox>
       </Select.Popover>
     </Select>

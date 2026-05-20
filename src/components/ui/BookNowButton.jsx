@@ -1,28 +1,39 @@
 "use client";
 
 import { bookingCar } from "@/app/lib/action";
+import RoundedLoading from "@/app/loading";
+import { authClient } from "@/lib/auth-client";
 import { Button, Label, Modal } from "@heroui/react";
+import { useRouter } from "next/navigation";
 
 const BookingModal = ({ car }) => {
+  const router = useRouter();
   const {
     _id,
-    availability,
-    carName,
-    brand,
-    dailyRentPrice,
-    carType,
-    bookingCount,
-    brandImageUrl,
-    description,
+    availability = "",
+    carName = "",
+    brand = "",
+    dailyRentPrice = 0,
     imageUrl,
+    bookingCount,
   } = car || {};
 
+  const { data: session, isPending } = authClient.useSession();
+
+  if (isPending) {
+    return <RoundedLoading />;
+  }
+
   const handleBookingBtn = async (e) => {
+    if (!session?.user) return router.replace("/login");
     const carData = Object.fromEntries(e.entries());
     const bookingData = {
-      userId: "",
+      userId: session?.user?.id,
       carId: _id,
       carName,
+      bookingCount,
+      availability,
+      imageUrl,
       dailyRentPrice,
       driverNeeded: carData?.driverNeeded,
       specialNote: carData?.specialNote,
@@ -31,8 +42,9 @@ const BookingModal = ({ car }) => {
     const result = await bookingCar(bookingData);
     if (result.success) {
       alert("success ");
+      router.refresh();
     } else {
-    alert(result.message);
+      alert(result.message);
     }
   };
   return (

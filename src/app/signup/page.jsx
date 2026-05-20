@@ -21,7 +21,6 @@ import {
 
 const SignUpPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-  // const [signUpError, setSignUpError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
@@ -32,31 +31,25 @@ const SignUpPage = () => {
     try {
       const formData = new FormData(e.currentTarget);
       const userData = Object.fromEntries(formData.entries());
-      console.log(userData);
-      const { data, error } = await authClient.signUp.email({
+      const { error } = await authClient.signUp.email({
         email: userData.email,
         password: userData.password,
         name: userData.name,
         image: userData.image,
       });
-      console.log(data, "user data")
-      console.log(error, "errrrrrrrrrrrrr")
       if (error) {
         const message = error?.message || "Failed to create account";
         toast.error(message);
         return;
       } else {
         toast.success("Account created successfully");
-
-        // e.target.reset();
-
-        // setTimeout(() => {
-        //   router.push("/login");
-        // }, 1000);
+        e.target.reset();
+        setTimeout(() => {
+          router.push("/login");
+        }, 1000);
       }
     } catch (err) {
       console.log(err);
-
       toast.error("Something went wrong");
     } finally {
       setLoading(false);

@@ -1,7 +1,6 @@
 import { Avatar, Chip } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
-import Link from "next/link";
 import { getSingleCar } from "@/app/lib/dataFetch";
 import BookingModal from "@/components/ui/BookNowButton";
 

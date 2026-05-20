@@ -7,7 +7,6 @@ const ExplorePage = async ({ searchParams }) => {
   const { query } = await searchParams;
   const AllCars = query ? await searchValue(query) : await getAllCars();
 
-  console.log(query);
   return (
     <div className="mx-5 xl:mx-0">
       <div className="w-full max-w-7xl mx-auto my-25">

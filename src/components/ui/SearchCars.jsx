@@ -12,7 +12,7 @@ const SearchCars = () => {
   };
 
   return (
-    <form action={handleSearchBtn} className="flex items-center">
+    <form action={handleSearchBtn} className="flex items-center ">
       <SearchField
         name="search"
         type="search"
@@ -24,11 +24,13 @@ const SearchCars = () => {
       >
         <SearchField.Group>
           <SearchField.SearchIcon />
-          <SearchField.Input className="w-[280px]" placeholder="Search..." />
+          <SearchField.Input
+            className="w-full max-w-70"
+            placeholder="Search..."
+          />
           <SearchField.ClearButton />
         </SearchField.Group>
       </SearchField>
-
       <Button className="rounded-none" type="submit">
         Search
       </Button>

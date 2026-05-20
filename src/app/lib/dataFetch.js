@@ -32,9 +32,9 @@ export const getSingleCar = async (id) => {
   }
 };
 
-export const getBookingCars = async (id) => {
+export const getBookingCarsByUserId = async (userId) => {
   try {
-    const res = await fetch(`${BASE_URL}/booking/${id}`);
+    const res = await fetch(`${BASE_URL}/booking/${userId}`);
     const bookingCar = await res.json();
     return bookingCar;
   } catch (error) {

@@ -16,8 +16,6 @@ const CarsCard = ({ car }) => {
     owner: { name = "", role = "", verifiedType = "", avatar = "" } = {},
   } = car || {};
 
-  console.log(car)
-
   return (
     <Card className="h-full bg-white border border-zinc-200/70 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
       <div className="p-5">

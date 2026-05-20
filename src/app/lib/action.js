@@ -2,8 +2,6 @@
 
 import { BASE_URL } from "./config";
 
-
-
 export const addCars = async (FormData) => {
   const carData = Object.fromEntries(FormData.entries());
   try {
@@ -33,10 +31,20 @@ export const bookingCar = async (bookingCarData) => {
     return data;
   } catch (error) {
     console.log(error.message);
-
     return {
       success: false,
       message: error.message,
     };
+  }
+};
+
+export const cancelBookingCar = async (carId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/booking/${carId}`, {
+      method: "DELETE",
+    });
+    return await res.json();
+  } catch (error) {
+    throw error;
   }
 };
