@@ -6,7 +6,7 @@ if (!BASE_URL) {
   throw new Error("Missing NEXT_PUBLIC_API_URL");
 }
 
-export const getToken = async () => {
+export const getAToken = async () => {
   const data = await auth.api.getToken({
     headers: await headers(),
   });
