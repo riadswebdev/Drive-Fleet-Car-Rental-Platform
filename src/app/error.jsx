@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@heroui/react";
 import { Icon } from "@iconify/react";
+import { useEffect } from "react";
 
 const ErrorPage = ({ error, reset }) => {
   useEffect(() => {

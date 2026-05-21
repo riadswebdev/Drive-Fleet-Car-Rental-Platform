@@ -2,7 +2,7 @@
 
 import toast from "react-hot-toast";
 import { Icon } from "@iconify/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { onUpdateCar } from "../lib/action";
 import { useRouter } from "next/navigation";
 import {
