@@ -9,7 +9,7 @@ const CarDetailsPage = async ({ params }) => {
   const { Id } = await params;
 
   const singleCar = await getSingleCar(Id);
-  if (!singleCar.success) return <ErrorPage />;
+  if (!singleCar?.success) return <ErrorPage />;
 
   const car = singleCar?.data;
 

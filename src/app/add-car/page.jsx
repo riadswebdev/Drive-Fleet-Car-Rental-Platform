@@ -30,7 +30,6 @@ const availabilityOptions = ["Available", "Unavailable"];
 const AddCarsPage = () => {
   const router = useRouter();
   const { data: session, isPending } = authClient.useSession();
-  console.log(session?.user?.id);
   if (isPending) return <RoundedLoading />;
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -48,7 +47,7 @@ const AddCarsPage = () => {
     const result = await addCars(addCarData);
     if (result.success) {
       toast.success(result.message);
-      router.push("/my-added-car");
+      router.replace("/my-added-car");
       router.refresh();
     } else {
       toast.error(result.message);

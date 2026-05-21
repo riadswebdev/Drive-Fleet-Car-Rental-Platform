@@ -1,11 +1,9 @@
 "use client";
 
 import UpdateCarModal from "@/app/update-car/page";
-import { Button, Card, Chip } from "@heroui/react";
+import { Card, Chip } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
-import Link from "next/link";
-import toast from "react-hot-toast";
 import DeleteCar from "./DeleteAddedCar";
 
 const MyAddedCarCard = ({ car }) => {

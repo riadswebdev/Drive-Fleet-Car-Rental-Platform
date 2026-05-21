@@ -26,7 +26,6 @@ const BookingModal = ({ car }) => {
   }
 
   const handleBookingBtn = async (e) => {
-    if (!session?.user) return router.replace("/login");
     const carData = Object.fromEntries(e.entries());
     const bookingData = {
       userId: session?.user?.id,
@@ -119,12 +118,3 @@ const BookingModal = ({ car }) => {
 };
 
 export default BookingModal;
-
-{
-  carId: "6a0b8141f87b62e4dbeaf083";
-  carName: "Huracán EVO";
-  dailyRentPrice: 950;
-  driverNeeded: "Yes";
-  specialNote: "fffff";
-  userId: "";
-}

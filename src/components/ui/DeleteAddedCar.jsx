@@ -10,8 +10,7 @@ const DeleteCar = ({ id }) => {
   const router = useRouter();
   const handleDelete = async () => {
     const result = await deleteAddedCar(id);
-    console.log(id, "delete ", result, "deleleelelell");
-    if (result.success) {
+    if (result?.success) {
       toast.success(result.message);
       router.refresh();
     }
