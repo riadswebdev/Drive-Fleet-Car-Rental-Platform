@@ -3,11 +3,13 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import { getSingleCar } from "@/app/lib/dataFetch";
 import BookingModal from "@/components/ui/BookNowButton";
+import ErrorPage from "@/app/error";
 
 const CarDetailsPage = async ({ params }) => {
   const { Id } = await params;
 
   const singleCar = await getSingleCar(Id);
+  if (!singleCar.success) return <ErrorPage />;
 
   const car = singleCar?.data;
 

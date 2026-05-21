@@ -33,6 +33,8 @@ const Navbar = async () => {
 
   const activeUser = session?.user;
 
+
+
   return (
     <div className="bg-[#050b18] px-5 xl:px-0 sticky top-0 z-50">
       <nav className="flex items-center justify-between py-4 w-full max-w-350 mx-auto">
@@ -48,7 +50,7 @@ const Navbar = async () => {
           </h2>
         </Link>
         <div className="">
-          <ul className="hidden lg:flex items-center gap-1 lg:gap-2">
+          <ul className="hidden md:flex items-center gap-1 lg:gap-2">
             {navItem.map((item, index) => (
               <li key={index}>
                 <NavLink

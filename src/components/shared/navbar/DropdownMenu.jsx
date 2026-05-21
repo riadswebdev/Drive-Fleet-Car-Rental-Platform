@@ -1,20 +1,28 @@
 import { Avatar, Dropdown, Label } from "@heroui/react";
 import Link from "next/link";
 import LogOutButton from "./LogOutButton";
-
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
 const DropdownMenu = async () => {
-  
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  const activeUser = session?.user;
+
   return (
     <Dropdown>
       <Dropdown.Trigger className="rounded-full">
         <Avatar size="sm">
           <Avatar.Image
             alt="Junior Garcia"
-            src="https://ik.imagekit.io/i455l48ls/Logo.png"
-            className="bg-[#bebebe] object-cover p-1"
+            src={activeUser?.image}
+            className="bg-[#bebebe] object-cover"
           />
-          <Avatar.Fallback delayMs={600}>JD</Avatar.Fallback>
+          <Avatar.Fallback delayMs={600}>
+            {activeUser?.name.charAt(0)}
+          </Avatar.Fallback>
         </Avatar>
       </Dropdown.Trigger>
       <Dropdown.Popover>

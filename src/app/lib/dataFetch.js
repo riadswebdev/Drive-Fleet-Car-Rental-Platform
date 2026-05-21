@@ -1,4 +1,4 @@
-import { BASE_URL } from "./config";
+import { BASE_URL, getToken } from "./config";
 
 export const getAllCars = async () => {
   try {
@@ -23,9 +23,16 @@ export const getAvailableCars = async () => {
 
 export const getSingleCar = async (id) => {
   try {
-    const res = await fetch(`${BASE_URL}/cars/${id}`);
+    const token = await getToken();
+    if (!token) {
+      throw new Error("Unauthorized");
+    }
+    const res = await fetch(`${BASE_URL}/cars/${id}`, {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
     const singleCar = await res.json();
-
     return singleCar;
   } catch (error) {
     throw error;
@@ -34,7 +41,15 @@ export const getSingleCar = async (id) => {
 
 export const getBookingCarsByUserId = async (userId) => {
   try {
-    const res = await fetch(`${BASE_URL}/booking/${userId}`);
+    const token = await getToken();
+    if (!token) {
+      throw new Error("Unauthorized");
+    }
+    const res = await fetch(`${BASE_URL}/booking/${userId}`, {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
     const bookingCar = await res.json();
     return bookingCar;
   } catch (error) {
@@ -53,9 +68,17 @@ export const searchValue = async (query) => {
   }
 };
 
-export const getAddedCarsData = async () => {
+export const getAddedCarsData = async (userId) => {
   try {
-    const res = await fetch(`${BASE_URL}/addedCar`);
+    const token = await getToken();
+    if (!token) {
+      throw new Error("Unauthorized");
+    }
+    const res = await fetch(`${BASE_URL}/addedCar/${userId}`, {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
     return res.json();
   } catch (error) {
     throw error;

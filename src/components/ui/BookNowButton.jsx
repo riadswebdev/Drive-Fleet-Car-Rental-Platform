@@ -5,6 +5,7 @@ import RoundedLoading from "@/app/loading";
 import { authClient } from "@/lib/auth-client";
 import { Button, Label, Modal } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const BookingModal = ({ car }) => {
   const router = useRouter();
@@ -41,10 +42,10 @@ const BookingModal = ({ car }) => {
     };
     const result = await bookingCar(bookingData);
     if (result.success) {
-      alert("success ");
+      toast.success("Successfully booked a Car ");
       router.refresh();
     } else {
-      alert(result.message);
+      toast.error(result.message);
     }
   };
   return (

@@ -12,6 +12,7 @@ import {
 } from "@heroui/react";
 import toast from "react-hot-toast";
 import RoundedLoading from "../loading";
+import { useRouter } from "next/navigation";
 
 const carTypes = [
   "SUV",
@@ -27,15 +28,16 @@ const carTypes = [
 const availabilityOptions = ["Available", "Unavailable"];
 
 const AddCarsPage = () => {
+  const router = useRouter();
   const { data: session, isPending } = authClient.useSession();
-
+  console.log(session?.user?.id);
   if (isPending) return <RoundedLoading />;
-
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const carData = Object.fromEntries(formData.entries());
     const addCarData = {
+      userId: session?.user?.id,
       ...carData,
       owner: {
         name: session?.user?.name,
@@ -46,7 +48,8 @@ const AddCarsPage = () => {
     const result = await addCars(addCarData);
     if (result.success) {
       toast.success(result.message);
-      e.target.reset();
+      router.push("/my-added-car");
+      router.refresh();
     } else {
       toast.error(result.message);
     }

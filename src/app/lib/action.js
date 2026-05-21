@@ -1,27 +1,43 @@
 "use server";
 
-import { json } from "better-auth";
-import { BASE_URL } from "./config";
+import { BASE_URL, getToken } from "./config";
 
 export const addCars = async (addCarData) => {
   try {
+    const token = await getToken();
+    if (!token) {
+      throw new Error("Unauthorized");
+    }
     const res = await fetch(`${BASE_URL}/car/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(addCarData),
     });
     return res.json();
-  } catch (error) {}
+  } catch (error) {
+    console.log(error.message);
+
+    return {
+      success: false,
+      message: error.message,
+    };
+  }
 };
 
 export const bookingCar = async (bookingCarData) => {
   try {
+    const token = await getToken();
+    if (!token) {
+      throw new Error("Unauthorized");
+    }
     const res = await fetch(`${BASE_URL}/car/book`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(bookingCarData),
     });
@@ -41,8 +57,15 @@ export const bookingCar = async (bookingCarData) => {
 
 export const cancelBookingCar = async (carId) => {
   try {
+    const token = await getToken();
+     if (!token) {
+       throw new Error("Unauthorized");
+     }
     const res = await fetch(`${BASE_URL}/booking/${carId}`, {
       method: "DELETE",
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
     });
     return await res.json();
   } catch (error) {
@@ -52,15 +75,19 @@ export const cancelBookingCar = async (carId) => {
 
 export const onUpdateCar = async (updateData, id) => {
   try {
+    const token = await getToken();
+     if (!token) {
+       throw new Error("Unauthorized");
+     }
     const res = await fetch(`${BASE_URL}/updateCar/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
+        authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(updateData),
     });
     return await res.json();
-    await res.json();
   } catch (error) {
     throw error;
   }
@@ -68,8 +95,15 @@ export const onUpdateCar = async (updateData, id) => {
 
 export const deleteAddedCar = async (carId) => {
   try {
+    const token = await getToken();
+     if (!token) {
+       throw new Error("Unauthorized");
+     }
     const res = await fetch(`${BASE_URL}/added/${carId}`, {
       method: "DELETE",
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
     });
     return await res.json();
   } catch (error) {

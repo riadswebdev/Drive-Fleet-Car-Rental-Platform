@@ -55,7 +55,11 @@ const SignUpPage = () => {
       setLoading(false);
     }
   };
-
+ const googleLogin = async () => {
+   await authClient.signIn.social({
+     provider: "google",
+   });
+ };
   return (
     <div className="mx-auto w-full max-w-lg shadow-sm py-5 px-10 my-10 bg-white rounded-2xl border border-zinc-100 ">
       <div className="text-center">
@@ -72,6 +76,7 @@ const SignUpPage = () => {
         </p>
       </div>
       <Button
+        onPress={googleLogin}
         className="w-full h-11 border rounded-lg border-zinc-100  mb-2"
         variant="ghost"
       >

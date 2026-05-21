@@ -10,7 +10,7 @@ const AvailableCarsSection = async () => {
         <h2 className="mb-10 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-10 lg:leading-16  text-zinc-900">
           Available Cars
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {AvailableCars.map((car) => (
             <CarsCard key={car._id} car={car} />
           ))}

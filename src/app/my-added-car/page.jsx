@@ -1,9 +1,14 @@
 import MyAddedCarCard from "@/components/ui/AddedCarsCard";
 import { getAddedCarsData } from "../lib/dataFetch";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
 const MyAddedCarPage = async () => {
-  const usersAddedCars = await getAddedCarsData();
-
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+  const userId = session?.user?.id;
+  const usersAddedCars = await getAddedCarsData(userId);
   const carsData = usersAddedCars?.data ?? usersAddedCars ?? [];
   return (
     <div className="mx-5 xl:mx-0">
