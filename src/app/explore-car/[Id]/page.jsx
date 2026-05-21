@@ -5,6 +5,11 @@ import { getSingleCar } from "@/app/lib/dataFetch";
 import BookingModal from "@/components/ui/BookNowButton";
 import ErrorPage from "@/app/error";
 
+export const metadata = {
+  title: "DriveFleet Car Details",
+  description: "View detailed information and availability for rental cars on DriveFleet.",
+};
+
 const CarDetailsPage = async ({ params }) => {
   const { Id } = await params;
 

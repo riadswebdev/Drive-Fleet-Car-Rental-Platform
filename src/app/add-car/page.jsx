@@ -14,6 +14,11 @@ import toast from "react-hot-toast";
 import RoundedLoading from "../loading";
 import { useRouter } from "next/navigation";
 
+export const metadata = {
+  title: "DriveFleet Car Rental Platform | Add New Car",
+  description: "Add and manage your premium car listings quickly and easily.",
+};
+
 const carTypes = [
   "SUV",
   "Sedan",

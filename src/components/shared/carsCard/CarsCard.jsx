@@ -11,18 +11,16 @@ const CarsCard = ({ car }) => {
     dailyRentPrice = 0,
     bookingCount = 0,
     carType = "",
-    imageUrl = "",
-    brandImageUrl = "",
-    owner: { name = "", role = "", verifiedType = "", avatar = "" } = {},
+    owner: { name = "", role = "", verifiedType = "" } = {},
   } = car || {};
-
+console.log(car?.owner)
   return (
     <Card className="h-full bg-white border border-zinc-200/70 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
       <div className="p-5">
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-center gap-3 min-w-0">
             <Image
-              src={brandImageUrl}
+              src={car?.brandImageUrl}
               width={40}
               height={40}
               alt={brand}
@@ -52,7 +50,7 @@ const CarsCard = ({ car }) => {
 
         <div className="relative aspect-video w-full mt-6">
           <Image
-            src={imageUrl}
+            src={car?.imageUrl}
             fill
             alt={carName}
             className="object-contain group-hover:scale-105 transition-transform duration-500"
@@ -90,7 +88,13 @@ const CarsCard = ({ car }) => {
 
       <div className="border-t border-zinc-100 px-5 pb-4 flex items-center justify-between gap-3">
         <div className="flex items-center gap-3 min-w-0">
-          <Avatar size="sm" src={avatar} alt={name} className="shrink-0" />
+          <Avatar size="sm">
+            <Avatar.Image
+              alt="Small Avatar"
+              src={ car?.owner?.avatar ||"https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg"}
+            />
+            <Avatar.Fallback>SM</Avatar.Fallback>
+          </Avatar>
 
           <div className="min-w-0">
             <h3 className="text-sm font-semibold text-zinc-800 truncate">

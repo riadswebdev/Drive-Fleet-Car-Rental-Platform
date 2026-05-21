@@ -13,7 +13,7 @@
     "bookingCount": 34,
     "owner": {
       "name": "Alexander Morgan",
-      "avatar": "https://randomuser.me/api/portraits/men/11.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -23,7 +23,7 @@
     "brand": "Ferrari",
     "dailyRentPrice": 1100,
     "carType": "Convertible Supercar",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/488%20Spider.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/488_Spider-removebg-preview.png",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Ferrari.png",
     "seatCapacity": 2,
     "pickupLocation": "Beverly Hills, California, USA",
@@ -32,7 +32,7 @@
     "bookingCount": 27,
     "owner": {
       "name": "Sophia Bennett",
-      "avatar": "https://randomuser.me/api/portraits/women/12.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -42,7 +42,7 @@
     "brand": "Porsche",
     "dailyRentPrice": 780,
     "carType": "Sports Coupe",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/911%20Turbo%20S.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/911_Turbo_S-removebg-preview.png",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Porsche.png",
     "seatCapacity": 4,
     "pickupLocation": "Munich, Germany",
@@ -51,7 +51,7 @@
     "bookingCount": 41,
     "owner": {
       "name": "Daniel Carter",
-      "avatar": "https://randomuser.me/api/portraits/men/13.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -61,7 +61,7 @@
     "brand": "BMW",
     "dailyRentPrice": 620,
     "carType": "Luxury Coupe",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/M8%20Competition.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/M8_Competition-removebg-preview.png?updatedAt=1779378270685",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/BMW.png",
     "seatCapacity": 4,
     "pickupLocation": "London, United Kingdom",
@@ -70,7 +70,7 @@
     "bookingCount": 18,
     "owner": {
       "name": "Olivia Thompson",
-      "avatar": "https://randomuser.me/api/portraits/women/14.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -80,7 +80,7 @@
     "brand": "Mercedes-Benz",
     "dailyRentPrice": 550,
     "carType": "Luxury Sedan",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/S-Class%20S580.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/S-Class_S580-removebg-preview.png?updatedAt=1779376595122",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Mercedes-Benz.png",
     "seatCapacity": 5,
     "pickupLocation": "Paris, France",
@@ -89,7 +89,7 @@
     "bookingCount": 45,
     "owner": {
       "name": "James Anderson",
-      "avatar": "https://randomuser.me/api/portraits/men/15.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -99,7 +99,7 @@
     "brand": "Audi",
     "dailyRentPrice": 640,
     "carType": "Performance Sedan",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/RS7%20Sportback.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/RS7_Sportback-removebg-preview%20(1).png?updatedAt=1779376595083",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Audi.png",
     "seatCapacity": 5,
     "pickupLocation": "Zurich, Switzerland",
@@ -108,7 +108,7 @@
     "bookingCount": 29,
     "owner": {
       "name": "Emma Wilson",
-      "avatar": "https://randomuser.me/api/portraits/women/16.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -118,7 +118,7 @@
     "brand": "McLaren",
     "dailyRentPrice": 980,
     "carType": "Supercar",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/720S%20Coupe.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/720S_Coupe-removebg-preview.png?updatedAt=1779376595391",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/McLaren.png",
     "seatCapacity": 2,
     "pickupLocation": "Singapore Marina Bay, Singapore",
@@ -127,7 +127,7 @@
     "bookingCount": 21,
     "owner": {
       "name": "Benjamin Harris",
-      "avatar": "https://randomuser.me/api/portraits/men/17.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -137,7 +137,7 @@
     "brand": "Rolls-Royce",
     "dailyRentPrice": 1200,
     "carType": "Ultra Luxury Sedan",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/Ghost%20Series%20II.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/Ghost_Series_II-removebg-preview.png?updatedAt=1779376879403",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/RollsRoycl.png",
     "seatCapacity": 5,
     "pickupLocation": "Abu Dhabi, UAE",
@@ -146,7 +146,7 @@
     "bookingCount": 12,
     "owner": {
       "name": "Charlotte Walker",
-      "avatar": "https://randomuser.me/api/portraits/women/18.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -156,7 +156,7 @@
     "brand": "Lamborghini",
     "dailyRentPrice": 1150,
     "carType": "Hypercar",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/Aventador%20SVJ.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/Aventador_SVJ-removebg-preview.png?updatedAt=1779376593361",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Lamborgini.png",
     "seatCapacity": 2,
     "pickupLocation": "Miami Beach, Florida, USA",
@@ -165,7 +165,7 @@
     "bookingCount": 39,
     "owner": {
       "name": "Michael Scott",
-      "avatar": "https://randomuser.me/api/portraits/men/19.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -175,7 +175,7 @@
     "brand": "Ferrari",
     "dailyRentPrice": 870,
     "carType": "Grand Tourer",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/Roma.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/Roma-removebg-preview.png?updatedAt=1779376814021",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Ferrari.png",
     "seatCapacity": 4,
     "pickupLocation": "Rome, Italy",
@@ -184,7 +184,7 @@
     "bookingCount": 16,
     "owner": {
       "name": "Ava Martinez",
-      "avatar": "https://randomuser.me/api/portraits/women/20.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -194,7 +194,7 @@
     "brand": "Porsche",
     "dailyRentPrice": 690,
     "carType": "Luxury SUV",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/Cayenne%20Turbo%20GT.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/Cayenne_Turbo_GT-removebg-preview.png?updatedAt=1779376719350",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Porsche.png",
     "seatCapacity": 5,
     "pickupLocation": "Vancouver, Canada",
@@ -203,7 +203,7 @@
     "bookingCount": 24,
     "owner": {
       "name": "William Parker",
-      "avatar": "https://randomuser.me/api/portraits/men/21.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -213,7 +213,7 @@
     "brand": "BMW",
     "dailyRentPrice": 520,
     "carType": "Luxury SUV",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/X7%20M60i.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/X7_M60i-removebg-preview%20(1).png?updatedAt=1779376807672",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/BMW.png",
     "seatCapacity": 7,
     "pickupLocation": "Toronto, Canada",
@@ -222,7 +222,7 @@
     "bookingCount": 20,
     "owner": {
       "name": "Isabella Young",
-      "avatar": "https://randomuser.me/api/portraits/women/22.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -232,8 +232,8 @@
     "brand": "Mercedes-Benz",
     "dailyRentPrice": 790,
     "carType": "Luxury SUV",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/G63%20AMG.png",
-    "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Mercedes-Benz.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/G63_AMG-removebg-preview.png?updatedAt=1779376838302",
+    "brandImageUrl": "",
     "seatCapacity": 5,
     "pickupLocation": "Doha, Qatar",
     "description": "The Mercedes-Benz G63 AMG combines legendary off-road capability with unmistakable luxury and performance.",
@@ -241,7 +241,7 @@
     "bookingCount": 47,
     "owner": {
       "name": "Ethan Robinson",
-      "avatar": "https://randomuser.me/api/portraits/men/23.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -251,7 +251,7 @@
     "brand": "Audi",
     "dailyRentPrice": 860,
     "carType": "Supercar",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/R8%20V10%20Performance.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/R8_V10_Performance-removebg-preview.png?updatedAt=1779376594205",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Audi.png",
     "seatCapacity": 2,
     "pickupLocation": "Sydney, Australia",
@@ -260,7 +260,7 @@
     "bookingCount": 15,
     "owner": {
       "name": "Mia Clark",
-      "avatar": "https://randomuser.me/api/portraits/women/24.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -270,7 +270,7 @@
     "brand": "McLaren",
     "dailyRentPrice": 740,
     "carType": "Grand Tourer",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/McLaren%20GT.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/McLaren_GT-removebg-preview%20(1).png?updatedAt=1779376593433",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/McLaren.png",
     "seatCapacity": 2,
     "pickupLocation": "Tokyo, Japan",
@@ -279,7 +279,7 @@
     "bookingCount": 9,
     "owner": {
       "name": "Noah Lewis",
-      "avatar": "https://randomuser.me/api/portraits/men/25.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -289,7 +289,7 @@
     "brand": "Rolls-Royce",
     "dailyRentPrice": 1180,
     "carType": "Ultra Luxury SUV",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/Rolls-Royce%20Cullinan.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/Rolls-Royce_Cullinan-removebg-preview.png?updatedAt=1779376594276",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/RollsRoycl.png",
     "seatCapacity": 5,
     "pickupLocation": "Riyadh, Saudi Arabia",
@@ -298,7 +298,7 @@
     "bookingCount": 11,
     "owner": {
       "name": "Amelia Hall",
-      "avatar": "https://randomuser.me/api/portraits/women/26.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -308,7 +308,7 @@
     "brand": "Lamborghini",
     "dailyRentPrice": 980,
     "carType": "Luxury SUV",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/Lamborghini.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/Lamborghini-removebg-preview.png?updatedAt=1779376595683",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Lamborgini.png",
     "seatCapacity": 5,
     "pickupLocation": "Monaco, Monaco",
@@ -317,7 +317,7 @@
     "bookingCount": 33,
     "owner": {
       "name": "Lucas Allen",
-      "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -327,7 +327,7 @@
     "brand": "Ferrari",
     "dailyRentPrice": 1190,
     "carType": "Hybrid Hypercar",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/Ferrari%20SF90%20Stradale.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/Ferrari_SF90_Stradale-removebg-preview.png?updatedAt=1779376921897",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Ferrari.png",
     "seatCapacity": 2,
     "pickupLocation": "Las Vegas, Nevada, USA",
@@ -336,7 +336,7 @@
     "bookingCount": 28,
     "owner": {
       "name": "Harper King",
-      "avatar": "https://randomuser.me/api/portraits/women/28.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -346,7 +346,7 @@
     "brand": "Porsche",
     "dailyRentPrice": 580,
     "carType": "Luxury Sedan",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/Porsche%20Panamera%20Turbo.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/Porsche_Panamera_Turbo-removebg-preview.png?updatedAt=1779376712403",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/Porsche.png",
     "seatCapacity": 4,
     "pickupLocation": "Barcelona, Spain",
@@ -355,7 +355,7 @@
     "bookingCount": 14,
     "owner": {
       "name": "Henry Wright",
-      "avatar": "https://randomuser.me/api/portraits/men/29.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }
@@ -365,7 +365,7 @@
     "brand": "BMW",
     "dailyRentPrice": 490,
     "carType": "Electric Luxury Sedan",
-    "imageUrl": "https://ik.imagekit.io/i455l48ls/BMW%20i7%20xDrive60.png",
+    "imageUrl": "https://ik.imagekit.io/i455l48ls/BMW_i7_xDrive60-removebg-preview%20(1).png?updatedAt=1779376824382",
     "brandImageUrl": "https://ik.imagekit.io/i455l48ls/BMW.png",
     "seatCapacity": 5,
     "pickupLocation": "Amsterdam, Netherlands",
@@ -374,7 +374,7 @@
     "bookingCount": 19,
     "owner": {
       "name": "Evelyn Green",
-      "avatar": "https://randomuser.me/api/portraits/women/30.jpg",
+      "avatar": "https://ik.imagekit.io/i455l48ls/ownerAvatar.jpg",
       "role": "Verified Dealer",
       "verifiedType": "dealer"
     }

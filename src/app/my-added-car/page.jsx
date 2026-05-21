@@ -3,6 +3,11 @@ import { getAddedCarsData } from "../lib/dataFetch";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 
+export const metadata = {
+  title: "My Added Cars | Drive Fleet Car Rental",
+  description: "View and manage the cars you have added to the Drive Fleet car rental platform.",
+};
+
 const MyAddedCarPage = async () => {
   const session = await auth.api.getSession({
     headers: await headers(),

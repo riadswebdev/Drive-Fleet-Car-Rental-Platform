@@ -19,6 +19,11 @@ import {
   TextField,
 } from "@heroui/react";
 
+export const metadata = {
+  title: "Sign Up - Drive Fleet Car Rental",
+  description: "Create an account to rent premium cars with Drive Fleet Car Rental.",
+};
+
 const SignUpPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);

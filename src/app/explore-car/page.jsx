@@ -3,6 +3,11 @@ import CarsCard from "@/components/shared/carsCard/CarsCard";
 import CarsCategory from "@/components/ui/Category";
 import SearchCars from "@/components/ui/SearchCars";
 
+export const metadata = {
+  title: "Explore Cars | Drive Fleet Car Rental",
+  description: "Browse available rental cars, search by model, and discover categories on the Drive Fleet car rental platform.",
+};
+
 const ExplorePage = async ({ searchParams }) => {
   const { query } = await searchParams;
   const AllCars = query ? await searchValue(query) : await getAllCars();

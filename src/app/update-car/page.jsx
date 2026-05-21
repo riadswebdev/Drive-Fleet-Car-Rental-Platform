@@ -15,6 +15,11 @@ import {
 import { onUpdateCar } from "../lib/action";
 import { useRouter } from "next/navigation";
 
+export const metadata = {
+  title: "Update Car | Drive Fleet",
+  description: "Update the details of a car listing in the Drive Fleet car rental platform.",
+};
+
 const carTypes = [
   "SUV",
   "Sedan",

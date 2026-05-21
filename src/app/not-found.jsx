@@ -2,6 +2,11 @@ import Link from "next/link";
 import { Button } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
+export const metadata = {
+  title: "Page Not Found | Drive Fleet Car Rental",
+  description: "The requested page could not be found. Return to the Drive Fleet Car Rental homepage to continue browsing.",
+};
+
 const NotFoundPage = () => {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 px-5">

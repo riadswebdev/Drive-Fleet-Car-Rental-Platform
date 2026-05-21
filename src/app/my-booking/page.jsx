@@ -3,6 +3,11 @@ import { getBookingCarsByUserId } from "../lib/dataFetch";
 import { auth } from "@/lib/auth";
 import UserBookingCard from "@/components/ui/BookingCard";
 
+export const metadata = {
+  title: "My Booking | Drive Fleet",
+  description: "View your current and past car rental bookings on the Drive Fleet platform.",
+};
+
 const MyBookingPage = async () => {
   const session = await auth.api.getSession({
     headers: await headers(),
