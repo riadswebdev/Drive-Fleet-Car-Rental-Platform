@@ -19,12 +19,11 @@ import {
   TextField,
 } from "@heroui/react";
 
-export const metadata = {
-  title: "Login | Drive Fleet Car Rental",
-  description: "Login to Drive Fleet to manage your car rentals and book premium vehicles.",
-};
-
 const LoginPage = () => {
+  useEffect(() => {
+    document.title = "Login | Drive Fleet Car Rental";
+  }, []);
+
   const [isVisible, setIsVisible] = useState(false);
   const [signInError, setSignInError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -63,9 +62,18 @@ const LoginPage = () => {
   };
 
   const googleLogin = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-    });
+    try {
+      const { error } = await authClient.signIn.social({
+        provider: "google",
+      });
+
+      if (error) {
+        toast.error(error.message);
+      }
+    } catch (err) {
+      console.log(err);
+      toast.error("Google login failed");
+    }
   };
 
   return (

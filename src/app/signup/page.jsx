@@ -3,7 +3,7 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Eye, EyeSlash } from "@gravity-ui/icons";
 import { authClient } from "@/lib/auth-client";
@@ -19,12 +19,11 @@ import {
   TextField,
 } from "@heroui/react";
 
-export const metadata = {
-  title: "Sign Up - Drive Fleet Car Rental",
-  description: "Create an account to rent premium cars with Drive Fleet Car Rental.",
-};
-
 const SignUpPage = () => {
+  useEffect(() => {
+    document.title = "Sign Up | Drive Fleet Car Rental";
+  }, []);
+
   const [isVisible, setIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -60,11 +59,22 @@ const SignUpPage = () => {
       setLoading(false);
     }
   };
- const googleLogin = async () => {
-   await authClient.signIn.social({
-     provider: "google",
-   });
- };
+
+  const googleLogin = async () => {
+    try {
+      const { error } = await authClient.signIn.social({
+        provider: "google",
+      });
+
+      if (error) {
+        toast.error(error.message);
+      }
+    } catch (err) {
+      console.log(err);
+      toast.error("Google login failed");
+    }
+  };
+
   return (
     <div className="mx-auto w-full max-w-lg shadow-sm py-5 px-10 my-10 bg-white rounded-2xl border border-zinc-100 ">
       <div className="text-center">

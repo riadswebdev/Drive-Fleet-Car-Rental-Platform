@@ -20,6 +20,12 @@ export const auth = betterAuth({
       clientSecret: process.env.CLIENT_SECRET,
     },
   },
+
+  account: {
+    accountLinking: {
+      enabled: true,
+    },
+  },
   session: {
     cookieCache: {
       enabled: true,

@@ -3,6 +3,8 @@
 import toast from "react-hot-toast";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import { onUpdateCar } from "../lib/action";
+import { useRouter } from "next/navigation";
 import {
   Button,
   FieldError,
@@ -12,13 +14,6 @@ import {
   Modal,
   TextField,
 } from "@heroui/react";
-import { onUpdateCar } from "../lib/action";
-import { useRouter } from "next/navigation";
-
-export const metadata = {
-  title: "Update Car | Drive Fleet",
-  description: "Update the details of a car listing in the Drive Fleet car rental platform.",
-};
 
 const carTypes = [
   "SUV",
@@ -33,7 +28,11 @@ const carTypes = [
 const availabilityOptions = ["Available", "Unavailable"];
 
 const UpdateCarModal = ({ car }) => {
-  const router = useRouter()
+  useEffect(() => {
+    document.title = "Update Car | Drive Fleet";
+  }, []);
+
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   console.log(car);
   const handleUpdateCar = async (e) => {
@@ -57,7 +56,7 @@ const UpdateCarModal = ({ car }) => {
 
       if (result?.success) {
         toast.success("Car updated successfully");
-        router.refresh()
+        router.refresh();
       } else {
         toast.error(result?.message || "Failed to update car");
       }
@@ -111,7 +110,6 @@ const UpdateCarModal = ({ car }) => {
                     <FieldError />
                   </TextField>
 
-             
                   <div className="w-full">
                     <Label>Car Type</Label>
 
@@ -128,7 +126,6 @@ const UpdateCarModal = ({ car }) => {
                     </select>
                   </div>
 
-         
                   <div className="w-full">
                     <Label>Availability</Label>
 
@@ -145,7 +142,6 @@ const UpdateCarModal = ({ car }) => {
                     </select>
                   </div>
 
-            
                   <TextField
                     isRequired
                     name="pickupLocation"
@@ -162,7 +158,6 @@ const UpdateCarModal = ({ car }) => {
                   </TextField>
                 </div>
 
-               
                 <TextField
                   isRequired
                   name="imageUrl"

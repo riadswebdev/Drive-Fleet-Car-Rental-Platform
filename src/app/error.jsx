@@ -4,12 +4,10 @@ import Link from "next/link";
 import { Button } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
-export const metadata = {
-  title: "Error | Drive Fleet Car Rental",
-  description: "An unexpected error occurred in the Drive Fleet Car Rental platform. Try again or return to the homepage.",
-};
-
 const ErrorPage = ({ error, reset }) => {
+  useEffect(() => {
+    document.title = "Error | Drive Fleet Car Rental";
+  }, []);
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 px-5">
       <div className="max-w-lg text-center">

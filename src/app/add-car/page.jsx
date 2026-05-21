@@ -14,11 +14,6 @@ import toast from "react-hot-toast";
 import RoundedLoading from "../loading";
 import { useRouter } from "next/navigation";
 
-export const metadata = {
-  title: "DriveFleet Car Rental Platform | Add New Car",
-  description: "Add and manage your premium car listings quickly and easily.",
-};
-
 const carTypes = [
   "SUV",
   "Sedan",
@@ -33,6 +28,10 @@ const carTypes = [
 const availabilityOptions = ["Available", "Unavailable"];
 
 const AddCarsPage = () => {
+  useEffect(() => {
+    document.title = "DriveFleet Car Rental Platform | Add New Car";
+  }, []);
+
   const router = useRouter();
   const { data: session, isPending } = authClient.useSession();
   if (isPending) return <RoundedLoading />;
