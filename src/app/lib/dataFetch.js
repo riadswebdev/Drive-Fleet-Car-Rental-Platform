@@ -35,6 +35,12 @@ export const getBookingCarsByUserId = async (userId) => {
   try {
     const res = await fetch(`${BASE_URL}/booking/${userId}`, {});
     const bookingCar = await res.json();
+     if (!res.ok) {
+       return {
+         success: false,
+         data: [],
+       };
+     }
     return bookingCar;
   } catch (error) {
     throw error;
