@@ -1,13 +1,15 @@
 "use server";
 
-import { BASE_URL } from "./config";
+import { BASE_URL, getAToken } from "./config";
 
 export const addCars = async (addCarData) => {
   try {
+    const token = await getAToken();
     const res = await fetch(`${BASE_URL}/car/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(addCarData),
     });
@@ -24,8 +26,6 @@ export const addCars = async (addCarData) => {
 
 export const bookingCar = async (bookingCarData) => {
   try {
-  
-
     const res = await fetch(`${BASE_URL}/car/book`, {
       method: "POST",
       headers: {

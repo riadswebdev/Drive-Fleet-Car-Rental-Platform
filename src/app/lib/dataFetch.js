@@ -1,4 +1,4 @@
-import { BASE_URL } from "./config";
+import { BASE_URL, getAToken } from "./config";
 
 export const getAllCars = async () => {
   try {
@@ -23,7 +23,7 @@ export const getAvailableCars = async () => {
 
 export const getSingleCar = async (id) => {
   try {
-    const res = await fetch(`${BASE_URL}/cars/${id}`, {});
+    const res = await fetch(`${BASE_URL}/cars/${id}`);
     const singleCar = await res.json();
     return singleCar;
   } catch (error) {
@@ -33,14 +33,19 @@ export const getSingleCar = async (id) => {
 
 export const getBookingCarsByUserId = async (userId) => {
   try {
-    const res = await fetch(`${BASE_URL}/booking/${userId}`, {});
+    const token = await getAToken();
+    const res = await fetch(`${BASE_URL}/booking/${userId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
     const bookingCar = await res.json();
-     if (!res.ok) {
-       return {
-         success: false,
-         data: [],
-       };
-     }
+    if (!res.ok) {
+      return {
+        success: false,
+        data: [],
+      };
+    }
     return bookingCar;
   } catch (error) {
     throw error;
@@ -60,7 +65,18 @@ export const searchValue = async (query) => {
 
 export const getAddedCarsData = async (userId) => {
   try {
-    const res = await fetch(`${BASE_URL}/addedCar/${userId}`, {});
+    const token = await getAToken();
+    const res = await fetch(`${BASE_URL}/addedCar/${userId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+       if (!res.ok) {
+         return {
+           success: false,
+           data: [],
+         };
+       }
     return res.json();
   } catch (error) {
     throw error;
