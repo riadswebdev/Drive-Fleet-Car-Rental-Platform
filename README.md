@@ -1,8 +1,9 @@
 # Drive Fleet Car Rental Platform
 
-![Banner](public/Banner.png)
+![Banner](https://api.microlink.io/?url=https://drive-fleet-car-rental-platform.vercel.app&screenshot=true&meta=false&embed=screenshot.url)
 
-Live site: https://drive-fleet-car-rental-platform.vercel.app
+**Live site:** [drive-fleet-car-rental-platform.vercel.app](https://drive-fleet-car-rental-platform.vercel.app)  
+**GitHub:** [Drive-Fleet-Car-Rental-Platform](https://github.com/riadswebdev/Drive-Fleet-Car-Rental-Platform)
 
 ## Project overview
 
@@ -34,8 +35,8 @@ Prerequisites: Node.js (recommended 18+) and `npm` or `yarn`.
 1. Clone the repository and install dependencies:
 
 ```bash
-git clone <repo-url>
-cd drive-fleet-car-rental-platform
+git clone https://github.com/riadswebdev/Drive-Fleet-Car-Rental-Platform.git
+cd Drive-Fleet-Car-Rental-Platform
 npm install
 ```
 
