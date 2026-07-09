@@ -1,6 +1,6 @@
 # Drive Fleet Car Rental Platform
 
-![Banner](https://api.microlink.io/?url=https://drive-fleet-car-rental-platform.vercel.app&screenshot=true&meta=false&embed=screenshot.url)
+![Banner](https://ik.imagekit.io/i455l48ls/drive%20fleet%20car%20rental.png)
 
 **Live site:** [drive-fleet-car-rental-platform.vercel.app](https://drive-fleet-car-rental-platform.vercel.app)  
 **GitHub:** [Drive-Fleet-Car-Rental-Platform](https://github.com/riadswebdev/Drive-Fleet-Car-Rental-Platform)
